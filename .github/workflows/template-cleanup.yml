@@ -57,7 +57,7 @@ jobs:
 
       - name: Remove Files
         run: |
-          rm -rf templates LICENSE .github/workflows/template-cleanup.yml CHANGELOG.md
+          rm -rf templates LICENSE .github/workflows/template-cleanup.yml CHANGELOG.md .github/FUNDING.yml
 
       - name: Commit and push changes
         run: |
