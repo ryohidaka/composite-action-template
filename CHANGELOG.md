@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/ryohidaka/composite-action-template/compare/v0.1.0...v0.1.1) (2024-09-10)
+
+
+### Bug Fixes
+
+* Move goodbye.sh to the scripts directory. ([f261b61](https://github.com/ryohidaka/composite-action-template/commit/f261b61ae16f0441ce36ef170807d5018cb0a6c1))
+* Move goodbye.sh to the scripts directory. ([2f4ab2d](https://github.com/ryohidaka/composite-action-template/commit/2f4ab2d4668a7384ab35de50d59b2cef4f963340))
+
 ## 0.1.0 (2024-08-16)
 
 
