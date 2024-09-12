@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/ryohidaka/composite-action-template/compare/v0.1.2...v0.2.0) (2024-09-12)
+
+
+### Features
+
+* Add step to checkout repository. ([fca5e62](https://github.com/ryohidaka/composite-action-template/commit/fca5e621b7d7a4d289a0de7a9c2c71b3fd84540e))
+
+
+### Bug Fixes
+
+* Fixed path of `goodbye.sh`. ([6cbca79](https://github.com/ryohidaka/composite-action-template/commit/6cbca7941ecd89842024ca7e30cfbd5dcde80043))
+
 ## [0.1.2](https://github.com/ryohidaka/composite-action-template/compare/v0.1.1...v0.1.2) (2024-09-10)
 
 
