@@ -15,6 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: ShellScript Formatter
-        uses: ryohidaka/action-sh-format@v0.2.3
+        uses: ryohidaka/action-sh-format@v0.2.4
         with:
           path: "./scripts"
