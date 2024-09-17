@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/ryohidaka/composite-action-template/compare/v0.2.0...v0.3.0) (2024-09-17)
+
+
+### Features
+
+* Add step to checkout repository. ([77d600c](https://github.com/ryohidaka/composite-action-template/commit/77d600cdc3a91d78f0377e6c77fa3f799e3485de))
+
+
+### Bug Fixes
+
+* Fix step to set GitHub Actions path. ([82c9be7](https://github.com/ryohidaka/composite-action-template/commit/82c9be79711509a5a824e0eea882e0c9d4958c03))
+
 ## [0.2.0](https://github.com/ryohidaka/composite-action-template/compare/v0.1.2...v0.2.0) (2024-09-12)
 
 
