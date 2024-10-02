@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/ryohidaka/composite-action-template/compare/v0.3.0...v0.3.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* Fix step to set GitHub Actions path. ([f4529a7](https://github.com/ryohidaka/composite-action-template/commit/f4529a7546597b975ac827bb274923740ded0c8b))
+
 ## [0.3.0](https://github.com/ryohidaka/composite-action-template/compare/v0.2.0...v0.3.0) (2024-09-17)
 
 
