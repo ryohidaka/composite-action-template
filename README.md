@@ -11,7 +11,7 @@ Template to create composite-action for GitHub Actions.
 ## Usage
 
 ```yml
-- uses: ryohidaka/composite-action-template@v1
+- uses: ryohidaka/composite-action-template@v0.3.1
   with:
     who-to-greet: "Mona the Octocat"
 - run: echo random-number "$RANDOM_NUMBER"
