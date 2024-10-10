@@ -60,9 +60,8 @@ jobs:
           rm -rf templates LICENSE .github/workflows/template-cleanup.yml CHANGELOG.md .github/FUNDING.yml
 
       - name: Commit and push changes
-        run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add .
-          git commit -m "chore: Template cleanup"
-          git push origin main
+        uses: ryohidaka/action-commit-push@v0.3.0
+        with:
+          files: "."
+          commit-message: "chore: Template cleanup"
+          rebase: true
