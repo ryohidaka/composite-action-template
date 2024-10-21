@@ -60,7 +60,7 @@ jobs:
           rm -rf templates LICENSE .github/workflows/template-cleanup.yml CHANGELOG.md .github/FUNDING.yml
 
       - name: Commit and push changes
-        uses: ryohidaka/action-commit-push@v0.3.0
+        uses: ryohidaka/action-commit-push@v0.3.2
         with:
           files: "."
           commit-message: "chore: Template cleanup"
