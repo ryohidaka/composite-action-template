@@ -44,20 +44,25 @@ jobs:
           if [[ "$NAME" == action-* ]]; then
             # Remove "action-" prefix, replace "-" with space, capitalize each word
             DISPLAY_NAME=$(echo "${NAME#action-}" | sed -E 's/-/ /g' | awk "{for(i=1;i<=NF;i++)\$i=toupper(substr(\$i,1,1)) substr(\$i,2)}1")
+            # Set NAME_SHORT by removing "action-" prefix
+            NAME_SHORT=$(echo "${NAME#action-}" | sed 's/-/./g')
           else
             DISPLAY_NAME="$NAME"
+            NAME_SHORT="$NAME"
           fi
 
           echo "NAME: $NAME"
           echo "AUTHOR_ID: $AUTHOR_ID"
           echo "DESCRIPTION: $DESCRIPTION"
           echo "DISPLAY_NAME: $DISPLAY_NAME"
+          echo "NAME_SHORT: $NAME_SHORT"
 
           # Replace placeholders in README template
           sed -e "s/%NAME%/$NAME/g" \
               -e "s/%AUTHOR%/$AUTHOR_ID/g" \
               -e "s/%DESCRIPTION%/$DESCRIPTION/g" \
               -e "s/%DISPLAY_NAME%/$DISPLAY_NAME/g" \
+              -e "s/%NAME_SHORT%/$NAME_SHORT/g" \
               templates/README.md > README.md
 
           # Replace placeholders in action.yml template
@@ -65,6 +70,7 @@ jobs:
               -e "s/%AUTHOR%/$AUTHOR_ID/g" \
               -e "s/%DESCRIPTION%/$DESCRIPTION/g" \
               -e "s/%DISPLAY_NAME%/$DISPLAY_NAME/g" \
+              -e "s/%NAME_SHORT%/$NAME_SHORT/g" \
               templates/action.yml > action.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
