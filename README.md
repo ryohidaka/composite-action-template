@@ -20,7 +20,7 @@ jobs:
   action-name:
     runs-on: ubuntu-latest
     steps:
-      - uses: ryohidaka/composite-action-template@v0.4.0
+      - uses: ryohidaka/composite-action-template@v0.4.1
         with:
           who-to-greet: "Mona the Octocat"
 
