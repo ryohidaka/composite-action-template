@@ -45,7 +45,7 @@ jobs:
             # Remove "action-" prefix, replace "-" with space, capitalize each word
             DISPLAY_NAME=$(echo "${NAME#action-}" | sed -E 's/-/ /g' | awk "{for(i=1;i<=NF;i++)\$i=toupper(substr(\$i,1,1)) substr(\$i,2)}1")
             # Set NAME_SHORT by removing "action-" prefix
-            NAME_SHORT=$(echo "${NAME#action-}" | sed 's/-/./g')
+            NAME_SHORT="${NAME#action-}"
           else
             DISPLAY_NAME="$NAME"
             NAME_SHORT="$NAME"
