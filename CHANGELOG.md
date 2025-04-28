@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/ryohidaka/composite-action-template/compare/v0.3.1...v0.4.0) (2025-04-28)
+
+
+### Features
+
+* Add process to replace DisplayName. ([f40b487](https://github.com/ryohidaka/composite-action-template/commit/f40b4875bfc996c28cc9d2cfd3a1368cd845d304))
+* Add process to replace NameShort. ([6f85ea3](https://github.com/ryohidaka/composite-action-template/commit/6f85ea34d7cafe50a0c1dc33783240dfb29129df))
+
+
+### Bug Fixes
+
+* Change job name for usage. ([6f6533a](https://github.com/ryohidaka/composite-action-template/commit/6f6533a6fab019b29085df7d79cd48bc2711d05a))
+
 ## [0.3.1](https://github.com/ryohidaka/composite-action-template/compare/v0.3.0...v0.3.1) (2024-10-02)
 
 
