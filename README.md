@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 jobs:
-  bump-uses:
+  action-name:
     runs-on: ubuntu-latest
     steps:
       - uses: ryohidaka/composite-action-template@v0.3.1
