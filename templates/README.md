@@ -1,4 +1,4 @@
-# %NAME%
+# %DISPLAY_NAME%
 
 [![GitHub Release](https://img.shields.io/github/v/release/%AUTHOR%/%NAME%)](https://github.com/%AUTHOR%/%NAME%/releases/)
 [![Test Action](https://github.com/%AUTHOR%/%NAME%/actions/workflows/test.yml/badge.svg)](https://github.com/%AUTHOR%/%NAME%/actions/workflows/test.yml)

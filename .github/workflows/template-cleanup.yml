@@ -40,16 +40,31 @@ jobs:
           NAME=$(basename $GITHUB_REPOSITORY)
           AUTHOR_ID=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
 
+          # Determine DISPLAY_NAME
+          if [[ "$NAME" == action-* ]]; then
+            # Remove "action-" prefix, replace "-" with space, capitalize each word
+            DISPLAY_NAME=$(echo "${NAME#action-}" | sed -E 's/-/ /g' | awk "{for(i=1;i<=NF;i++)\$i=toupper(substr(\$i,1,1)) substr(\$i,2)}1")
+          else
+            DISPLAY_NAME="$NAME"
+          fi
+
+          echo "NAME: $NAME"
+          echo "AUTHOR_ID: $AUTHOR_ID"
+          echo "DESCRIPTION: $DESCRIPTION"
+          echo "DISPLAY_NAME: $DISPLAY_NAME"
+
           # Replace placeholders in README template
           sed -e "s/%NAME%/$NAME/g" \
               -e "s/%AUTHOR%/$AUTHOR_ID/g" \
               -e "s/%DESCRIPTION%/$DESCRIPTION/g" \
+              -e "s/%DISPLAY_NAME%/$DISPLAY_NAME/g" \
               templates/README.md > README.md
 
           # Replace placeholders in action.yml template
           sed -e "s/%NAME%/$NAME/g" \
               -e "s/%AUTHOR%/$AUTHOR_ID/g" \
               -e "s/%DESCRIPTION%/$DESCRIPTION/g" \
+              -e "s/%DISPLAY_NAME%/$DISPLAY_NAME/g" \
               templates/action.yml > action.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
