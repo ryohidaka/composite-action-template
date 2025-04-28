@@ -27,12 +27,11 @@ jobs:
 
       - name: Get repository description
         id: get_description
+        uses: ryohidaka/action-get-description@v0.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          DESCRIPTION=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/${{ github.repository }}" | jq -r .description)
-          echo "DESCRIPTION=$DESCRIPTION" >> $GITHUB_OUTPUT
 
       - name: Replace placeholders using script
         run: |
@@ -74,7 +73,7 @@ jobs:
               templates/action.yml > action.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DESCRIPTION: ${{ steps.get_description.outputs.DESCRIPTION }}
+          DESCRIPTION: ${{ steps.get_description.outputs.description }}
 
       - name: Remove Files
         run: |
