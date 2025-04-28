@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/ryohidaka/composite-action-template/compare/v0.4.0...v0.4.1) (2025-04-28)
+
+
+### Bug Fixes
+
+* Changed the method of obtaining action_path. ([37b1772](https://github.com/ryohidaka/composite-action-template/commit/37b17728259f72c15ea05d4621225ce64fb30c91))
+* Fixed process to replace NameShort. ([d19ea58](https://github.com/ryohidaka/composite-action-template/commit/d19ea58d9b79d78945b243550638c339d89ac568))
+
 ## [0.4.0](https://github.com/ryohidaka/composite-action-template/compare/v0.3.1...v0.4.0) (2025-04-28)
 
 
