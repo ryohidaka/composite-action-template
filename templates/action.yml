@@ -35,10 +35,6 @@ runs:
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
 
-    - name: Set GitHub Path
-      run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}" >> $GITHUB_ENV
-      shell: bash
-
     - name: Run goodbye.sh
-      run: $GITHUB_ACTION_PATH/scripts/goodbye.sh
+      run: ${{ github.action_path }}/scripts/goodbye.sh
       shell: bash
