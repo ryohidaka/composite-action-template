@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 jobs:
-  bump-uses:
+  %NAME%:
     runs-on: ubuntu-latest
     steps:
       - uses: %AUTHOR%/%NAME%@v1
