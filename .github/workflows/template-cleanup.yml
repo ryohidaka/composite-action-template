@@ -30,8 +30,6 @@ jobs:
         uses: ryohidaka/action-get-description@v0.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Replace placeholders using script
         run: |
@@ -77,11 +75,14 @@ jobs:
 
       - name: Remove Files
         run: |
-          rm -rf templates LICENSE .github/workflows/template-cleanup.yml CHANGELOG.md .github/FUNDING.yml
+          rm -rf templates \
+            LICENSE \
+            .github/workflows/template-cleanup.yml \
+            CHANGELOG.md \
+            .github/FUNDING.yml
 
       - name: Commit and push changes
         uses: ryohidaka/action-commit-push@v0.6.0
         with:
-          files: "."
           commit-message: "chore: Template cleanup"
           rebase: true
