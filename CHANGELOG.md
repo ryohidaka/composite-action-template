@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/ryohidaka/composite-action-template/compare/v0.4.1...v0.5.0) (2025-07-11)
+
+
+### Features
+
+* Add extra-files option. ([2ebbbfc](https://github.com/ryohidaka/composite-action-template/commit/2ebbbfce23e5d3dd7100695fc01a3f50f777b1bb))
+
+
+### Bug Fixes
+
+* Remove bump-uses.yml ([d927011](https://github.com/ryohidaka/composite-action-template/commit/d927011759dbc7280e4f0606d362053b47666bf1))
+
 ## [0.4.1](https://github.com/ryohidaka/composite-action-template/compare/v0.4.0...v0.4.1) (2025-04-28)
 
 
