@@ -14,7 +14,7 @@ jobs:
   %NAME_SHORT%:
     runs-on: ubuntu-latest
     steps:
-      - uses: %AUTHOR%/%NAME%@v1
+      - uses: %AUTHOR%/%NAME%@v1 <!-- x-release-please-version -->
 ```
 
 ## Inputs

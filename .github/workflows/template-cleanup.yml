@@ -69,6 +69,11 @@ jobs:
               -e "s/%DISPLAY_NAME%/$DISPLAY_NAME/g" \
               -e "s/%NAME_SHORT%/$NAME_SHORT/g" \
               templates/action.yml > action.yml
+
+          # Replace placeholders in .release-please-config.jsonc template
+          sed -e "s/%NAME%/$NAME/g" \
+              -e "s/%AUTHOR%/$AUTHOR_ID/g" \
+              templates/.release-please-config.jsonc.yml > .release-please-config.jsonc
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DESCRIPTION: ${{ steps.get_description.outputs.description }}
