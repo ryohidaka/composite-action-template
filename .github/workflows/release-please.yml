@@ -11,12 +11,16 @@ permissions:
   issues: write
 
 jobs:
-  release-please:
+  bump-uses:
     runs-on: ubuntu-latest
     steps:
       - name: Bump Uses
         uses: ryohidaka/action-bump-uses@v0.4.0
 
+  release-please:
+    needs: bump-uses
+    runs-on: ubuntu-latest
+    steps:
       - uses: googleapis/release-please-action@v4
         with:
           release-type: simple
