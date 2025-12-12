@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/ryohidaka/composite-action-template/compare/v0.4.1...v0.4.2) (2025-12-12)
+
+
+### Bug Fixes
+
+* Bump actions/checkout ([9ddd1e9](https://github.com/ryohidaka/composite-action-template/commit/9ddd1e9529a2fb3f929e49abed07f5fafb08ab3f))
+
 ## [0.4.1](https://github.com/ryohidaka/composite-action-template/compare/v0.4.0...v0.4.1) (2025-04-28)
 
 
